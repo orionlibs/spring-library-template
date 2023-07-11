@@ -18,6 +18,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ContextConfiguration(classes = FakeTestingSpringConfiguration.FakeConfiguration.class)
 @WebAppConfiguration
 @TestInstance(Lifecycle.PER_CLASS)
+//@Execution(ExecutionMode.CONCURRENT)
 public class NewClassTest
 {
     private ListLogHandler listLogHandler;
