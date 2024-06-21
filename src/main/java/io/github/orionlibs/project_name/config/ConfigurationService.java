@@ -22,7 +22,7 @@ public class ConfigurationService
         {
             try
             {
-                registerConfiguration(OrionConfiguration.loadFeatureConfiguration(null));
+                registerConfiguration(OrionConfiguration.loadFeatureConfiguration((Properties)null));
             }
             catch(IOException e)
             {
