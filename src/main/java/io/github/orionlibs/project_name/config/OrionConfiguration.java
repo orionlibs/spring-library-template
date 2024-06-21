@@ -53,6 +53,22 @@ public class OrionConfiguration extends Properties
             throw new IOException("Could not setup feature configuration for Orion IoT: ", e);
         }
     }
+    
+    
+    public static OrionConfiguration loadFeatureConfiguration(Environment springEnv) throws IOException
+    {
+        OrionConfiguration featureConfiguration = new OrionConfiguration();
+        InputStream defaultConfigStream = OrionConfiguration.class.getResourceAsStream(FEATURE_CONFIGURATION_FILE);
+        try
+        {
+            featureConfiguration.loadDefaultAndCustomConfiguration(defaultConfigStream, springEnv);
+            return featureConfiguration;
+        }
+        catch(IOException e)
+        {
+            throw new IOException("Could not setup feature configuration for Orion IoT: ", e);
+        }
+    }
 
 
     /**
