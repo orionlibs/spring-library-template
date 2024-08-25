@@ -20,7 +20,7 @@ public class OrionConfiguration extends Properties
     /**
      * The location of the configuration file that has configuration for the features of this plugin.
      */
-    public static final String FEATURE_CONFIGURATION_FILE = "/io/github/orionlibs/orion_iot/configuration/orion-feature-configuration.prop";
+    public static final String FEATURE_CONFIGURATION_FILE = "/io/github/orionlibs/project-name/configuration/orion-feature-configuration.prop";
     
     
     public static OrionConfiguration loadLoggerConfigurationAndGet(Environment springEnv) throws IOException
@@ -50,7 +50,7 @@ public class OrionConfiguration extends Properties
         }
         catch(IOException e)
         {
-            throw new IOException("Could not setup feature configuration for Orion IoT: ", e);
+            throw new IOException("Could not setup feature configuration for project-name: ", e);
         }
     }
     
@@ -66,7 +66,7 @@ public class OrionConfiguration extends Properties
         }
         catch(IOException e)
         {
-            throw new IOException("Could not setup feature configuration for Orion IoT: ", e);
+            throw new IOException("Could not setup feature configuration for project-name: ", e);
         }
     }
 
